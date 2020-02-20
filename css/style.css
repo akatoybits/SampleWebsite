@@ -6,9 +6,9 @@
 header{
   background-image: url(../bg.jpg);
   background-size: cover;
-  height:   50vh;
+  height:   70vh;
   width: 100%;
-  background-position: center;
+  background-position: left;
 
 }
 ul{
