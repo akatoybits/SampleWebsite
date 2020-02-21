@@ -1,57 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-.wrapper {overflow: auto;}
-
-#main {margin-left: 4px;}
-
-#leftsidebar {
-  float: left;
-  width: auto;
-}
-
-#menulist {
-  margin: 20px;
-  padding: 0;
-  
-}
-
-.menuitem {
-  background: #fff;
-  border: 1px solid #333;
-  border-radius: 0;
-  list-style-type: none;
-  margin: 4px;
-  padding: 2px;
-  
-}
-
-@media screen and (min-width: 600px) {
-  #leftsidebar {width: 200px; float: left;}
-  #main {margin-left: 216px;}
-}
-</style>
+<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-
-<div class="wrapper">
-  <div id="leftsidebar">
-    <ul id="menulist">
-      <li class="menuitem">Menu-item 1</li>
-      <li class="menuitem">Menu-item 2</li>
-      <li class="menuitem">Menu-item 3</li>
-      <li class="menuitem">Menu-item 4</li>
-      <li class="menuitem">Menu-item 5</li>
-    </ul>
-  </div>
+  <div class="ex1">This div element has width: 500px;</div>
+  <br>
   
-  <div id="main">
-    <h1>Resize the browser window to see the effect!</h1>
-    <p>This example shows a menu that will float to the left of the page if the viewport is 480 pixels wide or wider. If the viewport is less than 480 pixels, the menu will be on top of the content.</p>
-  </div>
-</div>
+  <div class="ex2">This div element has max-width: 500px;</div>
+  
+  <p><strong>Tip:</strong> Drag the browser window to smaller than 500px wide, to see the difference between 
+  the two divs!</p>
 
 </body>
 </html>
