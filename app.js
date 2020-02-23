@@ -6,7 +6,8 @@ var mongoose = require("mongoose");
 var publicDir = require('path').join(__dirname,'/public');
 app.use(express.static(publicDir));
 
-mongoose.connect("mongodb://localhost/todo");
+//mongoose.connect("mongodb://localhost/todo");
+mongoose.connect("mongodb+srv://akatoybits:gemini214@cluster0-8drpq.mongodb.net/test?retryWrites=true&w=majority");
 
 app.set("view engine","ejs");
 
