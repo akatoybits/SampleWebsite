@@ -1,20 +1,32 @@
+let express = require('express')
+let ourApp = express()
+ourApp.use(express.urlencoded({extended: false}))
+ourApp.get('/',function(req, res){
+res.send(`
+<form action="/answer" method="POST">
+<p>What is your name?</p>
+<input name="yourname" autocomplete="off">
+<button>Submit</button>
+</form>
+`)
+})
+ourApp.post('/answer',function(req, res){
+    if(req.body.yourname.toUpperCase() == "BLUE"){
+        res.send(`
+        <p>match</p>
+        <a href='/'>home page</a>
+        `)
+    }
+    else{
+        res.send(`
+        <p>wrong</p>
+        <a href='/'>home page</a>
+        `)
+    }
 
-var slideIndex = 0;
-showSlides();
+})
 
-function showSlides() {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}    
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-  setTimeout(showSlides, 2000); // Change image every 2 seconds
-}
+ourApp.get('/answer',function(req, res){
+    res.send("are you lost")
+    })
+ourApp.listen(3000)
